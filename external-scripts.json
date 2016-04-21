@@ -10,5 +10,6 @@
   "hubot-rules",
   "hubot-shipit",
 
-  "hubot-factoids"
+  "hubot-factoids",
+  "hubot-slack"
 ]
