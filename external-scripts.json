@@ -9,6 +9,5 @@
   "hubot-redis-brain",
   "hubot-rules",
   "hubot-shipit",
-  "hubot-factoids",
-  "hubot-slack"
+  "hubot-factoids"
 ]
