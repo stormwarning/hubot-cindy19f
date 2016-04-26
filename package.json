@@ -5,7 +5,7 @@
   "author": "Jeff <rustyangel@gmail.com>",
   "description": "Not a spambot.",
   "dependencies": {
-    "hoek": "^3.0.4",
+    "hoek": "^4.0.0",
     "hubot": "^2.18.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-factoids": "^0.2.7",
