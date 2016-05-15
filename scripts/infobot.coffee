@@ -151,8 +151,8 @@ module.exports = (robot) ->
 
       if not fact? or fact.forgotten
       else
-        # response = msg.random FACTOID
-        response = 'i heard $KEY is $VALUE'
+        response = msg.random FACTOID
+        # response = 'i heard $KEY is $VALUE'
 
         response = response.replace(/\$KEY/, question)
         response = response.replace(/\$VALUE/, fact.value)
