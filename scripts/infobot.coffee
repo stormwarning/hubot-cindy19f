@@ -159,7 +159,7 @@ module.exports = (robot) ->
         # @TODO: Change is to are if asked.
         # Code here.
         fact.popularity++
-        msg.send "#{fact}"
+        msg.send "#{response}"
 
   robot.hear new RegExp("^[#{prefix}]([\\w\\s-]{2,}\\w)( @.+)?", 'i'), (msg) =>
     fact = @factoids.get msg.match[1]
