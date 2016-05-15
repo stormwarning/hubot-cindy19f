@@ -137,13 +137,13 @@ module.exports = (robot) ->
     msgtext = msgtext.replace(/^w(ow|hee|o+ho+)([,. ]+)/i, '')
     msgtext = msgtext.replace(/^heya?,?( folks)?([,. ]+)/i, '')
 
-    console.log (msgtext)
+    console.log ('msgtext: ' + msgtext)
     qregex = QWORDS.join('|')
     qregex = new RegExp("^(#{qregex})", 'i')
     question = msgtext.replace(qregex, '')
     # Strip off trailing question mark.
     question = question.replace(/\?/i, '')
-    console.log (question)
+    console.log ('question: ' + question)
     if question != ''
       # @TODO: Strip is|are but log for later.
       # Code here.
