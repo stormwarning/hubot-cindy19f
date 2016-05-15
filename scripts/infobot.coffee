@@ -154,8 +154,8 @@ module.exports = (robot) ->
         # response = msg.random FACTOID
         response = 'i heard $KEY is $VALUE'
 
-        response.replace(/\$KEY/, fact)
-        response.replace(/\$VALUE/, fact.value)
+        response = response.replace(/\$KEY/, fact)
+        response = response.replace(/\$VALUE/, fact.value)
         # @TODO: Change is to are if asked.
         # Code here.
         fact.popularity++
