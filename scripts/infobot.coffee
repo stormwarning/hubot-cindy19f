@@ -61,8 +61,10 @@ FACTOID = [
 ]
 
 Factoids = require './infobot-core'
+Normalize = require './infobot-normalize'
 
 module.exports = (robot) ->
+  @normalize = new Normalize(str, isAddressed)
   @factoids = new Factoids robot
   robot.router.get "/#{robot.name}/factoids", (req, res) =>
     res.end JSON.stringify @factoids.data, null, 2
