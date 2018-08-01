@@ -60,16 +60,18 @@ FACTOID = [
   '[$KEY] $VALUE'
 ]
 
-Factoids = require './infobot-core'
-Normalize = require './infobot-normalize'
+Factoids = require '../infobot/infobot-core'
+Normalize = require '../infobot/infobot-normalize'
 
 module.exports = (robot) ->
-  @normalize = new Normalize(str, isAddressed)
+  # @normalize = new Normalize(str, isAddressed)
   @factoids = new Factoids robot
   robot.router.get "/#{robot.name}/factoids", (req, res) =>
     res.end JSON.stringify @factoids.data, null, 2
 
   prefix = process.env.HUBOT_FACTOID_PREFIX or '!'
+
+  robot.logger.debug "Bot initialised."
 
   # Learn a factoid from general chatter.
   robot.hear /(.+)(^|\s)(is|are)(\s|$)(.+)/i, (msg) =>
